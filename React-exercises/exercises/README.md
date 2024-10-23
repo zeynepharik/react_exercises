@@ -73,35 +73,35 @@ Bu proje, kullanıcı etkileşimlerini test etmek için `@testing-library/react`
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Proje: Counter Uygulaması
+# Counter Uygulaması
 Bu proje, basit bir Redux ve React entegrasyonu ile sayaç (counter) işlevselliği sağlayan bir uygulamadır. Uygulama, kullanıcıların bir sayacı artırıp azaltabileceği bir arayüz sunar. Redux, uygulamanın durum yönetimini (state management) sağlamak için kullanılmıştır ve @reduxjs/toolkit ile yapılandırılmıştır.
 
-Özellikler:
+## Özellikler
 Kullanıcı, sayaç değerini artırmak için "Increment" butonuna tıklayabilir.
 Kullanıcı, sayaç değerini azaltmak için "Decrement" butonuna tıklayabilir.
 Sayaç başlangıç değeri sıfırdır ve her tıklamada ilgili yön doğrultusunda değişir.
 Durum yönetimi, @reduxjs/toolkit kullanılarak yapılır ve Redux store ile bileşen arasında bağlantı kurulmuştur.
 Uygulama, Vitest ve @testing-library/react kullanılarak test edilmiştir.
 
-Teknolojiler:
+## Teknolojiler
 React
 Redux Toolkit (@reduxjs/toolkit)
 @testing-library/react (Test yazma)
 Vitest (Test koşucusu)
 
-Test Yazma:
+## Test Yazma
 Bu proje, bileşenin işlevselliğini test etmek için birim testlerine sahiptir. Aşağıda, Counter bileşeninin işlevselliğini test eden bir örnek bulunmaktadır.
 
-Testin Açıklaması:
+### Testin Açıklaması
 Test Ortamı Kurulumu:
 render ile Counter bileşeni Provider içinde render edilir ve Redux store sağlanır.
 
-Değişiklikler ve Etkileşimler:
+### Değişiklikler ve Etkileşimler:
 fireEvent.click ile Increment ve Decrement butonlarına tıklanır.
 Sonuç Doğrulama:
 Sayaç değeri artırma ve azaltma işlemleri doğrulanır. Örneğin, sayaç değeri başta "0" ise, bir kez artırıldığında "1", ardından bir kez azaltıldığında tekrar "0" olmalıdır.
 
-Öğrendiklerim:
+### Öğrendiklerim
 Redux ile durum yönetimi yapmanın bileşenleri sadeleştirerek uygulama içi veri yönetimini ne kadar kolaylaştırdığını öğrendim.
 Redux store ile React bileşenlerini bağlamanın, merkezi durum yönetimini kolaylaştırarak uygulamayı daha yönetilebilir hale getirdiğini keşfettim.
 Test yazmanın, bileşenlerin işlevselliğini korumak için önemli olduğunu, kullanıcı etkileşimlerini güvence altına alarak, olası hataları önceden tespit etmenin değerini fark ettim.
