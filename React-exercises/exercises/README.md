@@ -71,7 +71,9 @@ Bu proje, kullanıcı etkileşimlerini test etmek için `@testing-library/react`
 - Kullanıcı girdilerinin yönetimini test etmenin, hataları önceden tespit etmek ve kullanıcı deneyimini optimize etmek için gerekliliğini anladım.
 - Test yazmanın, gelecekteki değişikliklerin mevcut işlevselliği etkilemediğini doğrulamak için önemli bir yöntem olduğunu öğrendim.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------Proje: Counter Uygulaması
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Proje: Counter Uygulaması
 Bu proje, basit bir Redux ve React entegrasyonu ile sayaç (counter) işlevselliği sağlayan bir uygulamadır. Uygulama, kullanıcıların bir sayacı artırıp azaltabileceği bir arayüz sunar. Redux, uygulamanın durum yönetimini (state management) sağlamak için kullanılmıştır ve @reduxjs/toolkit ile yapılandırılmıştır.
 
 Özellikler:
