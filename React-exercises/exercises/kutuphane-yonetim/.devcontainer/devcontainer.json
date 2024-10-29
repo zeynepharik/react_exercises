@@ -1,0 +1,12 @@
+{
+    "name": "Library Management App - Angular",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [4200],
+    "postCreateCommand": "npm install",
+    "extensions": [
+      "ms-azuretools.vscode-docker",
+      "eg2.vscode-npm-script",
+      "mhutchie.git-graph"
+    ]
+  }
+  
