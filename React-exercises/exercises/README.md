@@ -9,7 +9,7 @@ Bu proje, kullanıcıların todo (yapılacaklar) listesi oluşturmalarına olana
 ## Teknolojiler
 - React
 - @testing-library/react (Test yazma)
-- Jest (Test koşucusu)
+- Vitest (Test koşucusu)
 
 ## Test Yazma
 Bu proje, kullanıcı etkileşimlerini test etmek için `@testing-library/react` kullanılarak yazılmış birim testlerine sahiptir. Aşağıda, todo öğesi ekleme işlevini test eden bir örnek bulunmaktadır.
@@ -46,7 +46,7 @@ Bu proje, kullanıcıların isim ve e-posta bilgilerini girmelerini sağlayan ba
 ## Teknolojiler
 - React
 - @testing-library/react (Test yazma)
-- Jest (Test koşucusu)
+- Vitest (Test koşucusu)
 
 ## Test Yazma
 Bu proje, kullanıcı etkileşimlerini test etmek için `@testing-library/react` kullanılarak yazılmış birim testlerine sahiptir. Aşağıda, kullanıcı formunun işlevselliğini test eden bir örnek bulunmaktadır.
@@ -71,5 +71,39 @@ Bu proje, kullanıcı etkileşimlerini test etmek için `@testing-library/react`
 - Kullanıcı girdilerinin yönetimini test etmenin, hataları önceden tespit etmek ve kullanıcı deneyimini optimize etmek için gerekliliğini anladım.
 - Test yazmanın, gelecekteki değişikliklerin mevcut işlevselliği etkilemediğini doğrulamak için önemli bir yöntem olduğunu öğrendim.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Counter Uygulaması
+Bu proje, basit bir Redux ve React entegrasyonu ile sayaç (counter) işlevselliği sağlayan bir uygulamadır. Uygulama, kullanıcıların bir sayacı artırıp azaltabileceği bir arayüz sunar. Redux, uygulamanın durum yönetimini (state management) sağlamak için kullanılmıştır ve @reduxjs/toolkit ile yapılandırılmıştır.
+
+## Özellikler
+Kullanıcı, sayaç değerini artırmak için "Increment" butonuna tıklayabilir.
+Kullanıcı, sayaç değerini azaltmak için "Decrement" butonuna tıklayabilir.
+Sayaç başlangıç değeri sıfırdır ve her tıklamada ilgili yön doğrultusunda değişir.
+Durum yönetimi, @reduxjs/toolkit kullanılarak yapılır ve Redux store ile bileşen arasında bağlantı kurulmuştur.
+Uygulama, Vitest ve @testing-library/react kullanılarak test edilmiştir.
+
+## Teknolojiler
+React
+Redux Toolkit (@reduxjs/toolkit)
+@testing-library/react (Test yazma)
+Vitest (Test koşucusu)
+
+## Test Yazma
+Bu proje, bileşenin işlevselliğini test etmek için birim testlerine sahiptir. Aşağıda, Counter bileşeninin işlevselliğini test eden bir örnek bulunmaktadır.
+
+### Testin Açıklaması
+Test Ortamı Kurulumu:
+render ile Counter bileşeni Provider içinde render edilir ve Redux store sağlanır.
+
+### Değişiklikler ve Etkileşimler:
+fireEvent.click ile Increment ve Decrement butonlarına tıklanır.
+Sonuç Doğrulama:
+Sayaç değeri artırma ve azaltma işlemleri doğrulanır. Örneğin, sayaç değeri başta "0" ise, bir kez artırıldığında "1", ardından bir kez azaltıldığında tekrar "0" olmalıdır.
+
+### Öğrendiklerim
+Redux ile durum yönetimi yapmanın bileşenleri sadeleştirerek uygulama içi veri yönetimini ne kadar kolaylaştırdığını öğrendim.
+Redux store ile React bileşenlerini bağlamanın, merkezi durum yönetimini kolaylaştırarak uygulamayı daha yönetilebilir hale getirdiğini keşfettim.
+Test yazmanın, bileşenlerin işlevselliğini korumak için önemli olduğunu, kullanıcı etkileşimlerini güvence altına alarak, olası hataları önceden tespit etmenin değerini fark ettim.
 
 
