@@ -1,0 +1,27 @@
+.borrowing {
+    background-color: #f7f7f7; // Arka plan rengi
+    border: 1px solid #ddd; // Kenar rengi
+    border-radius: 8px; // Kenar yuvarlama
+    padding: 15px; // İç boşluk
+    margin-bottom: 15px; // Aşağıda boşluk bırakma
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Hafif gölge efekti
+  
+    h3.borrowing__borrower {
+      font-size: 1.5rem; // Başlık boyutu
+      color: #333; // Başlık rengi
+      margin-bottom: 10px; // Alt boşluk
+    }
+  
+    p {
+      font-size: 1rem; // Paragraf boyutu
+      line-height: 1.4; // Satır yüksekliği
+      color: #555; // Paragraf rengi
+      margin: 5px 0; // Üst ve alt boşluk
+    }
+  
+    .borrowing__status {
+      font-weight: bold; // Kalın yazı
+      color: #ff5722; // Durum için özel renk (örneğin, beklemede)
+    }
+  }
+  

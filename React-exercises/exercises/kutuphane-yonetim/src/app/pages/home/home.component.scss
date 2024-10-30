@@ -1,0 +1,23 @@
+.home {
+    background-color: #f0f8ff; // Arka plan rengi
+    text-align: center; // Metni ortala
+    padding: 50px 20px; // İç boşluk
+    border-radius: 8px; // Kenar yuvarlama
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Hafif gölge efekti
+    margin: 20px; // Dış boşluk
+  
+    h1 {
+      font-size: 2.5rem; // Başlık boyutu
+      color: #007acc; // Başlık rengi
+      margin-bottom: 20px; // Alt boşluk
+    }
+  
+    p {
+      font-size: 1.2rem; // Paragraf boyutu
+      color: #333; // Paragraf rengi
+      line-height: 1.6; // Satır yüksekliği
+      max-width: 600px; // Maksimum genişlik
+      margin: 0 auto; // Ortala
+    }
+  }
+  

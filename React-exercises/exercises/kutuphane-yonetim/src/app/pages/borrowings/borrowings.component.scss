@@ -1,0 +1,44 @@
+.borrowings {
+    // Genel ödünçler container stili
+    padding: 20px;
+    background-color: #f0f8ff; // Arka plan rengi
+    border-radius: 8px; // Köşe yuvarlama
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Hafif gölge
+  
+    h2 {
+      // Başlık stili
+      font-size: 24px; // Yazı boyutu
+      color: #333; // Yazı rengi
+      margin-bottom: 20px; // Alt boşluk
+      text-align: center; // Ortala
+    }
+  
+    // Ödünç alma bileşeni için stiller
+    app-borrowing {
+      display: block; // Her bir ödünç alma bileşeni blok düzende
+      margin-bottom: 15px; // Aşağıya boşluk
+      padding: 15px; // İçerik boşluğu
+      background-color: #fff; // Ödünç bileşeni arka plan rengi
+      border: 1px solid #ddd; // Sınır rengi
+      border-radius: 5px; // Köşe yuvarlama
+      transition: all 0.3s ease; // Geçiş efekti
+  
+      &:hover {
+        // Hover efekti
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Hoverda gölge
+        transform: translateY(-2px); // Yukarı hareket
+      }
+  
+      // Ödünç alınan kitap durumu için stil
+      &.overdue {
+        border-left: 5px solid #e74c3c; // Geçmiş olanlar için kırmızı kenar
+        background-color: #ffe6e6; // Açık kırmızı arka plan
+      }
+  
+      &.active {
+        border-left: 5px solid #3498db; // Aktif olanlar için mavi kenar
+        background-color: #e6f7ff; // Açık mavi arka plan
+      }
+    }
+  }
+  

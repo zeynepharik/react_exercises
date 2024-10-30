@@ -1,0 +1,10 @@
+<div class="reading-progress">
+    <h4 class="reading-progress__bookId">Kitap ID: {{ progress.bookId }}</h4>
+    <p class="reading-progress__currentPage">Mevcut Sayfa: {{ progress.currentPage }}</p>
+    <p class="reading-progress__totalPages">Toplam Sayfa: {{ progress.totalPages }}</p>
+    <p class="reading-progress__readingTime">Okuma Süresi: {{ progress.readingTime }} dakika</p>
+    <ul class="reading-progress__notes">
+      <li *ngFor="let note of progress.notes">{{ note }}</li>
+    </ul>
+  </div>
+  

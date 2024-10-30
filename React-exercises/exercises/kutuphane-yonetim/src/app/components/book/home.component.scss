@@ -1,0 +1,41 @@
+.home {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; // Arka plan rengi
+    border-radius: 8px; // Kenar yuvarlama
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333; // Başlık rengi
+    }
+  
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5; // Satır yüksekliği
+      color: #555; // Paragraf rengi
+    }
+  
+    // Kitap bileşenleri için düzen
+    .books {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; // Kitaplar arasındaki boşluk
+  
+      app-book {
+        flex: 0 1 calc(25% - 20px); // Her kitap bileşeninin genişliği
+        background-color: #fff; // Kitap bileşeni arka plan rengi
+        border: 1px solid #ddd; // Kenar rengi
+        border-radius: 5px; // Kenar yuvarlama
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Gölge efekti
+        padding: 15px; // İç boşluk
+        transition: transform 0.2s; // Geçiş efekti
+  
+        &:hover {
+          transform: scale(1.05); // Hover efekt
+        }
+      }
+    }
+  }
+  

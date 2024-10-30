@@ -1,0 +1,33 @@
+.reading-progress {
+    background-color: #e9f5ff; // Arka plan rengi
+    border: 1px solid #b3e0ff; // Kenar rengi
+    border-radius: 8px; // Kenar yuvarlama
+    padding: 15px; // İç boşluk
+    margin-bottom: 15px; // Aşağıda boşluk bırakma
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Hafif gölge efekti
+  
+    h4.reading-progress__bookId {
+      font-size: 1.2rem; // Kitap ID başlığı boyutu
+      color: #0056b3; // Başlık rengi
+      margin-bottom: 10px; // Alt boşluk
+    }
+  
+    p {
+      font-size: 1rem; // Paragraf boyutu
+      line-height: 1.4; // Satır yüksekliği
+      color: #333; // Paragraf rengi
+      margin: 5px 0; // Üst ve alt boşluk
+    }
+  
+    .reading-progress__notes {
+      list-style-type: disc; // Liste işareti
+      padding-left: 20px; // Sol iç boşluk
+  
+      li {
+        font-size: 0.9rem; // Not boyutu
+        color: #555; // Not rengi
+        margin: 3px 0; // Üst ve alt boşluk
+      }
+    }
+  }
+  
