@@ -1,34 +1,41 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { BorrowingsComponent } from './borrowings.component';
-import { BorrowingService } from '../../services/borrowing.service';
-import { of } from 'rxjs';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { BorrowingComponent } from './borrowing.component';
 
-describe('BorrowingsComponent', () => {
-  let component: BorrowingsComponent;
-  let fixture: ComponentFixture<BorrowingsComponent>;
-  let borrowingService: jasmine.SpyObj<BorrowingService>;
+describe('BorrowingComponent', () => {
+  let component: BorrowingComponent;
+  let fixture: ComponentFixture<BorrowingComponent>;
 
   beforeEach(async () => {
-    const spy = jasmine.createSpyObj('BorrowingService', ['getBorrowings']);
-    
     await TestBed.configureTestingModule({
-      declarations: [BorrowingsComponent],
-      providers: [{ provide: BorrowingService, useValue: spy }]
+      imports: [HttpClientTestingModule],
+      declarations: [BorrowingComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(BorrowingsComponent);
+    fixture = TestBed.createComponent(BorrowingComponent);
     component = fixture.componentInstance;
-    borrowingService = TestBed.inject(BorrowingService) as jasmine.SpyObj<BorrowingService>;
+  });
+
+  beforeEach(() => {
+    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should load borrowings on init', () => {
-    const mockBorrowings = [{ borrowerName: 'John Doe', borrowDate: new Date() }];
-    borrowingService.getBorrowings.and.returnValue(of(mockBorrowings));
-    component.ngOnInit();
-    expect(component.borrowings).toEqual(mockBorrowings);
+  it('should display borrowing details', () => {
+    component.borrowing = {
+      borrowerName: 'John Doe',
+      borrowDate: new Date(),
+      dueDate: new Date(),
+      status: 'Returned',
+      notes: 'No notes'
+    };
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.borrowing__borrower').textContent).toContain('John Doe');
+    expect(compiled.querySelector('.borrowing__status').textContent).toContain('Returned');
   });
 });

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing'; // HTTP test modülü
 import { BorrowingComponent } from './borrowing.component';
 
 describe('BorrowingComponent', () => {
@@ -7,11 +8,16 @@ describe('BorrowingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule], // Buraya ekledik
       declarations: [BorrowingComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(BorrowingComponent);
     component = fixture.componentInstance;
+  });
+
+  beforeEach(() => {
+    fixture.detectChanges(); // Değişiklikleri yansıtıyoruz
   });
 
   it('should create', () => {
@@ -26,7 +32,8 @@ describe('BorrowingComponent', () => {
       status: 'Returned',
       notes: 'No notes'
     };
-    fixture.detectChanges();
+    fixture.detectChanges(); // Değişiklikleri yansıtıyoruz
+
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.borrowing__borrower').textContent).toContain('John Doe');
     expect(compiled.querySelector('.borrowing__status').textContent).toContain('Returned');
